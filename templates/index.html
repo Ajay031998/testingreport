@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Text Processor</title>
+</head>
+<body>
+    <h1>Text Processor</h1>
+    <form method="post">
+        <label for="text_input">Enter Text:</label>
+        <br>
+        <!-- Use a large textarea for input -->
+        <textarea id="text_input" name="text_input" rows="10" cols="50">{{ input_text }}</textarea>
+        <br>
+        <input type="submit" value="Process">
+    </form>
+    <br>
+    {% if output_text %}
+        <h3>Processed Text:</h3>
+        <!-- <p>{{ output_text }}</p> -->
+        <p>{{ output_text|replace('\n', '<br>')|safe }}</p>
+    {% endif %}
+</body>
+</html>
