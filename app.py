@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 import openai
 
 # Set your OpenAI API key
-openai.api_key = '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'
+openai.api_key = '########################################'
 
 # Define a prompt
 # prompt = "Translate the following English text to French: 'Hello, how are you?'"
